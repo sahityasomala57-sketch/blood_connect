@@ -173,7 +173,7 @@ export const DonorDashboard: React.FC<DonorDashboardProps> = ({
           <button
             onClick={() => {
               authService.logout();
-              if (onNavigate) onNavigate('/');
+              if (onNavigate) onNavigate('/donor/login');
             }}
             title="Log out"
             className="p-2.5 rounded-xl border border-[#E2E8F0] hover:bg-[#FDECEC] text-[#64748B] hover:text-[#C62828] transition-colors cursor-pointer"

@@ -85,13 +85,12 @@ export const RoleAccessGuard: React.FC<RoleAccessGuardProps> = ({
 
           <button
             onClick={() => {
-              authService.loginWithDemo(requiredRole);
-              onNavigate(target.dashboardRoute);
+              onNavigate(target.loginRoute);
             }}
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl text-xs font-bold text-[#1976D2] bg-[#E3F2FD] hover:bg-[#BBDEFB] border border-[#1976D2]/30 flex items-center justify-center gap-2 transition-colors cursor-pointer"
           >
             <Sparkles className="w-4 h-4" />
-            <span>1-Click Verified Demo Access</span>
+            <span>Use Demo Account</span>
           </button>
         </div>
 

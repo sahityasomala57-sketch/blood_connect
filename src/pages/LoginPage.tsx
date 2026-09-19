@@ -89,17 +89,6 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onNavigate, currentRoute =
     const demo = DEMO_ACCOUNTS[role];
     setEmail(demo.email);
     setPassword('demo123');
-
-    setLoading(true);
-    setTimeout(() => {
-      try {
-        const user = authService.loginWithDemo(role);
-        handleRedirectForRole(user.role);
-      } catch {
-        setError('Failed to login with demo account.');
-        setLoading(false);
-      }
-    }, 120);
   };
 
   const handleRegisterClick = () => {

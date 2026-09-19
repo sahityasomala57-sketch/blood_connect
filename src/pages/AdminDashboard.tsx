@@ -118,7 +118,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentSubView =
           <button
             onClick={() => {
               authService.logout();
-              if (onNavigate) onNavigate('/');
+              if (onNavigate) onNavigate('/admin/login');
             }}
             title="Log out of Admin Portal"
             className="p-2.5 rounded-xl border border-[#E2E8F0] hover:bg-[#FDECEC] text-[#64748B] hover:text-[#C62828] transition-colors cursor-pointer"

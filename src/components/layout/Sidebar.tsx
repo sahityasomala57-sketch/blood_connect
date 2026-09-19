@@ -178,7 +178,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   const handleLogout = () => {
     authService.logout();
-    onNavigate('/');
+    if (role === 'HOSPITAL') {
+      onNavigate('/hospital/login');
+    } else if (role === 'BLOOD_BANK') {
+      onNavigate('/blood-bank/login');
+    } else if (role === 'DONOR') {
+      onNavigate('/donor/login');
+    } else if (role === 'ADMIN') {
+      onNavigate('/admin/login');
+    } else {
+      onNavigate('/');
+    }
     if (isMobileOpen) onCloseMobile();
   };
 

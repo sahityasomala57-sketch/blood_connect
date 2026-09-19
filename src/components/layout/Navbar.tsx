@@ -68,8 +68,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
   };
 
   const handleExitSector = () => {
+    const r = user?.role;
     authService.logoutSector();
-    onNavigate('/');
+    if (r === 'HOSPITAL') onNavigate('/hospital/login');
+    else if (r === 'BLOOD_BANK') onNavigate('/blood-bank/login');
+    else if (r === 'DONOR') onNavigate('/donor/login');
+    else if (r === 'ADMIN') onNavigate('/admin/login');
+    else onNavigate('/');
   };
 
   const isActive = (path: string) => currentView.includes(path);
