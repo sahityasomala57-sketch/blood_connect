@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #0B1F3A;
+  --color-navy-blue: #123B63;
+  --color-medical-blue: #1976D2;
+  --color-medical-blue-hover: #1565C0;
+  --color-medical-blue-light: #E3F2FD;
+  
+  --color-primary-blood: #C62828;
+  --color-emergency-red: #D32F2F;
+  --color-critical-red: #B71C1C;
+  --color-soft-red: #FDECEC;
+  
+  --color-success-green: #2E7D32;
+  --color-soft-green: #E8F5E9;
+  
+  --color-warning-amber: #F9A825;
+  --color-soft-amber: #FFF8E1;
+  
+  --color-bg-main: #F5F7FA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-muted: #EEF2F6;
+  --color-text-primary: #172033;
+  --color-text-secondary: #64748B;
+  --color-border-subtle: #E2E8F0;
+}
+
+:root {
+  --deep-navy: #0B1F3A;
+  --navy-blue: #123B63;
+  --medical-blue: #1976D2;
+  --medical-blue-hover: #1565C0;
+  --medical-blue-light: #E3F2FD;
+  
+  --primary-blood: #C62828;
+  --emergency-red: #D32F2F;
+  --critical-red: #B71C1C;
+  --soft-red: #FDECEC;
+  
+  --success-green: #2E7D32;
+  --soft-green: #E8F5E9;
+  
+  --warning-amber: #F9A825;
+  --soft-amber: #FFF8E1;
+  
+  --bg-main: #F5F7FA;
+  --bg-card: #FFFFFF;
+  --bg-muted: #EEF2F6;
+  --text-primary: #172033;
+  --text-secondary: #64748B;
+  --border-subtle: #E2E8F0;
+}
+
+body {
+  background-color: #F5F7FA;
+  color: #172033;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border: none;
+  text-align: left;
+}
+
+/* ============================================================
+   TOP HARDWARE TELEMETRY BAR & NAVIGATION
+   ============================================================ */
+.nav-deep-navy {
+  background-color: #0B1F3A !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid #123B63 !important;
+}
+
+.pulse-bar-telemetry {
+  background-color: #071426 !important;
+  color: #E2E8F0 !important;
+  border-bottom: 1px solid #0E2A4D !important;
+}
+
+/* ============================================================
+   BUTTON SYSTEM (Medical Command Center Design)
+   ============================================================ */
+.btn-medical-primary {
+  background-color: #1976D2 !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+.btn-medical-primary:hover {
+  background-color: #1565C0 !important;
+}
+
+.btn-secondary-navy {
+  background-color: #FFFFFF !important;
+  color: #0B1F3A !important;
+  border: 1px solid #CBD5E1 !important;
+  font-weight: 600;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn-secondary-navy:hover {
+  background-color: #F8FAFC !important;
+  border-color: #94A3B8 !important;
+}
+
+.btn-emergency-action {
+  background-color: #C62828 !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  transition: background-color 0.15s ease;
+}
+.btn-emergency-action:hover {
+  background-color: #B71C1C !important;
+}
+
+.btn-success-action {
+  background-color: #2E7D32 !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+.btn-success-action:hover {
+  background-color: #1B5E20 !important;
+}
+
+.btn-warning-action {
+  background-color: #F9A825 !important;
+  color: #172033 !important;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+.btn-warning-action:hover {
+  background-color: #F57F17 !important;
+}
+
+/* Ensure all buttons with text-white strictly display white */
+button.text-white,
+button.text-white *,
+.btn-medical-primary *,
+.btn-emergency-action *,
+.btn-success-action * {
+  color: #FFFFFF !important;
+}
+
+/* ============================================================
+   CARD SURFACES & COMPONENT STYLING
+   ============================================================ */
+.card-healthcare {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(11, 31, 58, 0.04), 0 1px 2px -1px rgba(11, 31, 58, 0.04);
+}
+
+/* Form Controls */
+input, select, textarea {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #172033;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #1976D2 !important;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15) !important;
+}
+
+/* Tables */
+table th {
+  background-color: #EEF2F6;
+  color: #0B1F3A;
+  font-weight: 700;
+}
+table tr:hover td {
+  background-color: #F8FAFC;
+}
+
+/* Custom Healthcare Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F7FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Animations */
+@keyframes emergency-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+}
+
+.animate-emergency-pulse {
+  animation: emergency-pulse 2s infinite ease-in-out;
+}
